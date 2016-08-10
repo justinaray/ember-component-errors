@@ -1,7 +1,7 @@
 {
   "name": "ember-component-errors",
-  "version": "0.0.0",
-  "description": "Small description for ember-component-errors goes here",
+  "version": "0.0.1",
+  "description": "Illustrates common Ember Component Errors",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -12,9 +12,12 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinaray/ember-component-errors.git"
+  },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4.4.7"
   },
   "author": "",
   "license": "MIT",

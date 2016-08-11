@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('timer-cleanup');
+  this.route('listener-cleanup');
   this.route('prototype-ref');
 });
 

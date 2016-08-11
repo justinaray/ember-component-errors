@@ -22,8 +22,11 @@ export default Component.extend(TimerMixin, {
   },
 
   willDestroyElement() {
+    this.cancelTimer();
     this._super(...arguments);
+  },
 
+  cancelTimer() {
     const currTimer = this.get('currTimer');
     if (currTimer) {
       run.cancel(currTimer);

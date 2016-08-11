@@ -2,6 +2,8 @@
 
 This is an Ember App which serves to illustrate some common errors that arise when developing Ember Components.
 
+[Live Demo](https://justinaray.github.io/ember-component-errors/)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.

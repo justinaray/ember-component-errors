@@ -8,20 +8,20 @@
       <a {{action (action 'toggleDocs')}} role="tab">Instructions</a>
     </li>
     <li role="presentation" class="{{if (not showInstructions) "active"}}">
-      <a {{action (action 'toggleDocs')}} role="tab">Description</a>
+      <a {{action (action 'toggleDocs')}} role="tab">Wha?</a>
     </li>
   </ul>
 
   <div class="tab-content">
     {{#if showInstructions}}
       <div role="tabpanel" class="tab-pane active">
-        {{doc-renderer path="assets/docs/timer-cleanup/instructions.md"}}
+        {{doc-renderer path=instructionsPath}}
       </div>
     {{/if}}
 
     {{#if (not showInstructions)}}
       <div role="tabpanel" class="tab-pane active" >
-        {{doc-renderer path="assets/docs/timer-cleanup/description.md"}}
+        {{doc-renderer path=descPath}}
       </div>
     {{/if}}
   </div>

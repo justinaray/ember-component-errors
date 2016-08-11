@@ -17,7 +17,6 @@ git checkout gh-pages
 git pull
 ls -1 | grep -v -E '^dist|CNAME|circle.yml$' | xargs rm -rf
 mv dist/* ./
-mv dist/.* ./
 rmdir dist
 
 git add -A

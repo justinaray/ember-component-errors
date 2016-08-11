@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'ember-component-errors',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       EXTEND_PROTOTYPES: {
         Array: true,

@@ -1,0 +1,12 @@
+<button class="btn btn-default" {{action (action addTimer)}}>
+  Add
+</button>
+<button class="btn btn-default" {{action (action removeTimer)}}>
+  Remove
+</button>
+
+<div class="timers">
+  {{#each timers key="id" as |timer|}}
+    {{component itemComponent name=timer.name}}
+  {{/each}}
+</div>

@@ -11,7 +11,8 @@ git checkout master
 git pull
 rm -rf dist
 
-ember build --environment production
+# Build in dev mode so we can see all the internal warnings, etc
+ember build # --environment production
 
 git checkout gh-pages
 git pull

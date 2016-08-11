@@ -1,17 +1,9 @@
-<div>
+{{#problem-container
+  instructionsPath="assets/docs/timer-cleanup/instructions.md"
+  descPath="assets/docs/timer-cleanup/description.md"}}
   <h1>Messy Timers</h1>
   {{timer-group itemComponent="timer-runaway"}}
 
   <h1>Neat Timers</h1>
   {{timer-group itemComponent="timer-runaway-fixed"}}
-</div>
-
-<div>
-  <h1>Demo Instructions</h1>
-  {{doc-renderer path="assets/docs/timer-cleanup/instructions.md"}}
-</div>
-
-<div>
-  <h1>Problem Description</h1>
-  {{doc-renderer path="assets/docs/timer-cleanup/description.md"}}
-</div>
+{{/problem-container}}

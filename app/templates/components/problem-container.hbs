@@ -1,0 +1,28 @@
+<div class="demo">
+  {{yield}}
+</div>
+
+<div class="docs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="{{if showInstructions "active"}}">
+      <a {{action (action 'toggleDocs')}} role="tab">Instructions</a>
+    </li>
+    <li role="presentation" class="{{if (not showInstructions) "active"}}">
+      <a {{action (action 'toggleDocs')}} role="tab">Description</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    {{#if showInstructions}}
+      <div role="tabpanel" class="tab-pane active">
+        {{doc-renderer path="assets/docs/timer-cleanup/instructions.md"}}
+      </div>
+    {{/if}}
+
+    {{#if (not showInstructions)}}
+      <div role="tabpanel" class="tab-pane active" >
+        {{doc-renderer path="assets/docs/timer-cleanup/description.md"}}
+      </div>
+    {{/if}}
+  </div>
+</div>

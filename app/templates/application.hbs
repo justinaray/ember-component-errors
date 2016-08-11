@@ -1,13 +1,21 @@
 <header>
-  <nav>
-    <ul>
-      <li>{{#link-to "index"}}Common Component Errors{{/link-to}}</li>
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      {{#link-to "index" class="navbar-brand"
+        title="Back to Common Component Errors Home"
+        aria-label="Back to Common Component Errors Home"}}
+        Home
+      {{/link-to}}
+    </div>
+
+    <ul class="nav navbar-nav">
+      <li>{{#link-to "timer-cleanup"}}Clean up Timers{{/link-to}}</li>
+      {{!-- Coming Soon
       <li>Super</li>
       <li>The Prototype</li>
-      <li>{{#link-to "timer-cleanup"}}Clean up Timers{{/link-to}}</li>
       <li>Clean up Listeners</li>
       <li>Don't Fight the Lifecycle</li>
-      <li>Find the right scope</li>
+      <li>Find the right scope</li> --}}
     </ul>
   </nav>
 </header>
@@ -16,22 +24,12 @@
 </main>
 <footer>
   <div class="author">
-    Justin Ray
-    <br>
-    <a href="https://twitter.com/thejustinaray" target="_blank">@thejustinaray</a>
-    <br>
-    <a href="https://github.com/justinaray" target="_blank">
-      <img src="GitHub-Mark-32px.png"
-        title="justinaray on GitHub"
-        alt="GitHub Octocat Profile"
-        aria-label="GitHub Octocat Profile">
-    </a>
+    Copyright (c) 2016 Justin Ray
+    (<a href="https://twitter.com/thejustinaray" target="_blank">@thejustinaray</a>)
   </div>
 
-  <a href="https://github.com/justinaray/ember-component-errors" target="_blank">
-    <img style="position: absolute; top: 0; right: 0; border: 0;"
-      src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"
-      alt="Fork me on GitHub"
-      data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
-  </a>
+  <div class="links">
+    <iframe src="https://ghbtns.com/github-btn.html?user=justinaray&repo=ember-component-errors&type=star&count=false" frameborder="0" scrolling="0" width="75px" height="20px"></iframe>
+    <iframe src="https://ghbtns.com/github-btn.html?user=justinaray&repo=ember-component-errors&type=fork&count=false" frameborder="0" scrolling="0" width="75px" height="20px"></iframe>
+  </div>
 </footer>

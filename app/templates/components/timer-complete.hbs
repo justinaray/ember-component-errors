@@ -1,6 +1,7 @@
-{{name}}
-{{#if paused}}
-  Paused
-{{else}}
-  {{deltaText}}
-{{/if}}
+{{#timer-card name=name}}
+  {{#if paused}}
+    Paused
+  {{else}}
+    {{deltaText}}
+  {{/if}}
+{{/timer-card}}

@@ -97,7 +97,7 @@ export default Component.extend({
         this.$().tooltip('fixTitle');
       } else {
         // Create
-        this.$().tooltip({placement: 'bottom'});
+        this.$().tooltip({placement: 'top'});
       }
 
       this._lastRenderedTooltip = deltaText;

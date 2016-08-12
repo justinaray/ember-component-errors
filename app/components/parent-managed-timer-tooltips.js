@@ -19,7 +19,7 @@ export default Component.extend({
     this._super(...arguments);
     let $timers = this.$('.tooltip-tgt .timer');
     $timers.tooltip({
-      placement: 'bottom'
+      placement: 'top'
     });
   },
 

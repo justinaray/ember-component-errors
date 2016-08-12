@@ -1,0 +1,14 @@
+<div class="panel timer-card">
+  {{#if name}}
+    <div class="panel-heading">
+      <h3 class="panel-title">{{name}}</h3>
+    </div>
+  {{/if}}
+  <div class="panel-body">
+    {{#if hasBlock}}
+      {{yield}}
+    {{else}}
+      Loaded {{deltaSeconds}} seconds ago
+    {{/if}}
+  </div>
+</div>

@@ -1,5 +1,7 @@
-{{#if paused}}
-  Paused
-{{else}}
-  {{name}} (Loaded {{deltaSeconds}} seconds ago)
-{{/if}}
+{{#timer-card name=name}}
+  {{#if paused}}
+    Paused
+  {{else}}
+    (Loaded {{deltaSeconds}} seconds ago)
+  {{/if}}
+{{/timer-card}}

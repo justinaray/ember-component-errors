@@ -24,7 +24,7 @@ willRender() {
 didRender() {
   this._super(...arguments);
 
-  this.$().tooltip({placement: 'bottom'});
+  this.$().tooltip({placement: 'top'});
   this._firstRender = false;
 }
 ...

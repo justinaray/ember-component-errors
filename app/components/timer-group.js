@@ -3,12 +3,14 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   classNames: ['timer-group'],
 
+  initialCount: 2,
+
   init() {
     this._super(...arguments);
 
     this.set('count', 0);
     this.set('timers', []);
-    for(let i=0; i<3; i++) {
+    for(let i = 0; i < this.initialCount; i++) {
       this.addTimer();
     }
   },

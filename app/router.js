@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('listener-cleanup');
   this.route('prototype-ref');
   this.route('proper-context');
+  this.route('general-tips');
 });
 
 export default Router;

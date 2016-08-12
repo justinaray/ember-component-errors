@@ -1,64 +1,36 @@
 <section>
-  <h1>
-    Common Ember Component Errors
-  </h1>
+  <h1 class="sr-only">Welcome</h1>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Common Ember Component Errors</h1>
+      <p>
+        This demo app contains examples of errors frequently encountered when building Ember Components.
+      </p>
 
-  <section>
-    <h1 class="sr-only">Overview</h1>
-    <p>
-      This demo app contains examples of errors frequently encountered when building Ember Components.
-    </p>
+      <p class="pull-right">
+        {{#link-to "timer-cleanup" class="btn btn-primary btn-lg" ariaRole="button"}}Get Started{{/link-to}}
+      </p>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <p>
+    <span class="label label-warning">Note:</span>&nbsp;Some of these examples are contrived
+    or may not the best way to implement a feature they illustrate.
+    Rather, they are focused more on educating some of the nuances of component development in Ember.
+  </p>
+</section>
 
-    <p>
-      Select a topic and explore the demo and descriptions of why these errors occurr.
-    </p>
+<section>
+  <h1 class="sr-only">Help/Feedback</h1>
 
-    <p>
-      <span class="label label-warning">Note:</span>Some of the examples are contrived or may not the best way to implement a feature they illustrate.
-      Rather, they are focused more on educating some of the nuances of component development in Ember.
-    </p>
-  </section>
+  <p>
+    This is a work in progress and <a href="https://github.com/justinaray/ember-component-errors" target="_blank">Feeback/Issues/PRs</a> are always welcome.
+  </p>
 
-  <section>
-    <h1>General Component Tips</h1>
-
-    <ul>
-      <li>Always call 'this._super(...arguments)'</li>
-      <li>
-        Always clean up after yourself
-        <ul>
-          <li>Remove/Tear Down events, listeners, and plugins</li>
-          <li>Try to make your didInsertElement and willDestroyElement mirror opposites</li>
-          <li>Use template actions whenever possible</li>
-          <li>Favor Ember native addons and events over jQuery or vanilla libraries</li>
-        </ul>
-      </li>
-      <li>Mind the Prototype</li>
-      <li>Implement your feature at the right component context</li>
-      <li>
-        Keep your Component easy to reason about
-        <ul>
-          <li>Stick to and use to the Lifecycle</li>
-          <li>Render the data/state consistently (functional)</li>
-          <li>Pass as much data as possible in (DDAU)</li>
-        </ul>
-      </li>
-    </ul>
-
-  </section>
-
-  <section>
-    <h1>Help/Feedback</h1>
-
-    <p>
-      This is a work in progress and <a href="https://github.com/justinaray/ember-component-errors" target="_blank">Feeback/Issues/PRs</a> are always welcome.
-    </p>
-
-    Todo/Ideas:
-    <ul>
-      <li>Responsive Menu</li>
-      <li>Catch errors and log them to the UI (Instead of using DevTools)</li>
-      <li>Misc: Icons, Suave, template lint</li>
-    </ul>
-  </section>
+  Todo/Ideas:
+  <ul>
+    <li>Responsive Menu</li>
+    <li>Catch errors and log them to the UI (Instead of using DevTools)</li>
+    <li>Tests, pre-push, ember-suave, template lint, ...</li>
+  </ul>
 </section>

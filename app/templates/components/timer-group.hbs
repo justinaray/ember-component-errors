@@ -7,6 +7,6 @@
 
 <div class="timers">
   {{#each timers key="id" as |timer|}}
-    {{component itemComponent name=timer.name}}
+    {{component itemComponent name=timer.name showTooltip=showTooltips}}
   {{/each}}
 </div>

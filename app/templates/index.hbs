@@ -24,10 +24,25 @@
 
     <ul>
       <li>Always call 'this._super(...arguments)'</li>
-      <li>Always clean up after yourself (events, listeners, plugins)</li>
+      <li>
+        Always clean up after yourself
+        <ul>
+          <li>Remove/Tear Down events, listeners, and plugins</li>
+          <li>Try to make your didInsertElement and willDestroyElement mirror opposites</li>
+          <li>Use template actions whenever possible</li>
+          <li>Favor Ember native addons and events over jQuery or vanilla libraries</li>
+        </ul>
+      </li>
       <li>Mind the Prototype</li>
       <li>Implement your feature at the right component context</li>
-      <li>Learn and harness the Ember Component Lifecycle - Don't fight against it</li>
+      <li>
+        Keep your Component easy to reason about
+        <ul>
+          <li>Stick to and use to the Lifecycle</li>
+          <li>Render the data/state consistently (functional)</li>
+          <li>Pass as much data as possible in (DDAU)</li>
+        </ul>
+      </li>
     </ul>
 
   </section>

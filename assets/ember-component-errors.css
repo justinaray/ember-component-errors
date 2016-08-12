@@ -6751,6 +6751,33 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+.timer-card {
+  width: 200px;
+  border-color: #bce8f1;
+}
+.timer-card > .panel-heading {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.timer-card > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #bce8f1;
+}
+.timer-card > .panel-heading .badge {
+  color: #d9edf7;
+  background-color: #31708f;
+}
+.timer-card > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #bce8f1;
+}
+.timer-group .timers {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .problem-container {
   width: 100%;
   display: flex;

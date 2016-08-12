@@ -16,6 +16,15 @@ define('ember-component-errors/tests/components/doc-renderer.jshint', ['exports'
     assert.ok(true, 'components/doc-renderer.js should pass jshint.');
   });
 });
+define('ember-component-errors/tests/components/parent-managed-timer-tooltips.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - components/parent-managed-timer-tooltips.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/parent-managed-timer-tooltips.js should pass jshint.');
+  });
+});
 define('ember-component-errors/tests/components/problem-container.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -23,6 +32,15 @@ define('ember-component-errors/tests/components/problem-container.jshint', ['exp
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'components/problem-container.js should pass jshint.');
+  });
+});
+define('ember-component-errors/tests/components/timer-complete.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - components/timer-complete.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/timer-complete.js should pass jshint.');
   });
 });
 define('ember-component-errors/tests/components/timer-group.jshint', ['exports'], function (exports) {

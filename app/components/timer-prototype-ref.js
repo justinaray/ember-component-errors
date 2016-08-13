@@ -34,6 +34,8 @@ export default Component.extend({
   willRender() {
     this._super(...arguments);
 
+    this.cancelTimer();
+
     this.set('times.curr', Date.now());
 
     let delta = 0;
@@ -50,12 +52,21 @@ export default Component.extend({
   didRender() {
     this._super(...arguments);
 
-    this.set('currTimer', run.later(this, 'rerender', 1000));
+    this.set('currTimer', run.later(this, () => {
+        // Insurance in case the timer can't cancel fast enough
+        if (this && !this.get('isDestroying') && !this.get('isDestroyed')) {
+          this.rerender();
+        }
+    }, 1000));
   },
 
   willDestroyElement() {
     this._super(...arguments);
 
+    this.cancelTimer();
+  },
+
+  cancelTimer() {
     const currTimer = this.get('currTimer');
     if (currTimer) {
       run.cancel(currTimer);

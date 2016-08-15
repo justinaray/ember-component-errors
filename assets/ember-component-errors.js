@@ -449,6 +449,8 @@ define('ember-component-errors/components/timer-prototype-ref', ['exports', 'emb
     willRender: function willRender() {
       this._super.apply(this, arguments);
 
+      this.cancelTimer();
+
       this.set('times.curr', Date.now());
 
       var delta = 0;
@@ -463,14 +465,25 @@ define('ember-component-errors/components/timer-prototype-ref', ['exports', 'emb
     },
 
     didRender: function didRender() {
+      var _this = this;
+
       this._super.apply(this, arguments);
 
-      this.set('currTimer', run.later(this, 'rerender', 1000));
+      this.set('currTimer', run.later(this, function () {
+        // Insurance in case the timer can't cancel fast enough
+        if (_this && !_this.get('isDestroying') && !_this.get('isDestroyed')) {
+          _this.rerender();
+        }
+      }, 1000));
     },
 
     willDestroyElement: function willDestroyElement() {
       this._super.apply(this, arguments);
 
+      this.cancelTimer();
+    },
+
+    cancelTimer: function cancelTimer() {
       var currTimer = this.get('currTimer');
       if (currTimer) {
         run.cancel(currTimer);
@@ -1703,7 +1716,7 @@ define("ember-component-errors/templates/components/problem-container", ["export
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("a");
         dom.setAttribute(el4, "role", "tab");
-        var el5 = dom.createTextNode("Wha?");
+        var el5 = dom.createTextNode("¯\\_(ツ)_/¯");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n    ");
@@ -3498,7 +3511,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("ember-component-errors/app")["default"].create({"name":"ember-component-errors","version":"0.0.1+52919b12"});
+  require("ember-component-errors/app")["default"].create({"name":"ember-component-errors","version":"0.0.1+28624183"});
 }
 
 /* jshint ignore:end */
